@@ -70,6 +70,9 @@ COPY php-fpm.conf /etc/php7/php-fpm.d/www.conf
 COPY index.php /var/www/public
 COPY start /root/start
 
+ADD crontab.txt /crontab.txt
+RUN /usr/bin/crontab /crontab.txt
+
 # expose
 EXPOSE 80
 
