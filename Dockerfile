@@ -1,5 +1,6 @@
 # OS alpine 3.13
-FROM nginx:1.19.8-alpine
+FROM nginx:1.21-alpine
+	#1.19.8-alpine
 
 # alpine & nginx version
 RUN cat /etc/os-release | grep PRETTY_NAME && nginx -v
@@ -8,7 +9,7 @@ RUN cat /etc/os-release | grep PRETTY_NAME && nginx -v
 ARG timezone="Europe/Lisbon"
 
 # packages
-RUN apk update && apk add --no-cache \
+RUN apk update && apk upgrade && apk add --no-cache \
 	bash \
 	supervisor \
 	tzdata \
