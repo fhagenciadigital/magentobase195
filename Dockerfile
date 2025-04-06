@@ -18,6 +18,7 @@ RUN apk update && apk upgrade && apk add --no-cache \
 	# php
 	php7 \
 	php7-ctype \
+	php7-iconv \
 	php7-curl \
 	php7-dom \
 	php7-fileinfo \
@@ -28,6 +29,7 @@ RUN apk update && apk upgrade && apk add --no-cache \
 	php7-mbstring \
 	php7-openssl \
 	php7-pdo \
+	php7-pdo_mysql \
 	php7-phar \
 	php7-psr \
 	php7-opcache \
