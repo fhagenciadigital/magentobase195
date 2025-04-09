@@ -39,6 +39,7 @@ RUN apk update && apk upgrade && apk add --no-cache \
 	php7-xml \
 	php7-zlib \
 	php7-cli \
+	php7-soap \
 	&& rm -rf /var/cache/apk/*
 
 # directory links
